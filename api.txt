@@ -1,0 +1,20 @@
+fetch('/api/todos')
+  .then(response => response.json())
+  .then(todos => console.log(todos))
+  .catch(error => console.error(error));
+
+---
+
+Este código realiza una solicitud GET a la ruta /mi-ruta en la API y registra la respuesta en la consola.
+
+Para realizar otras operaciones CRUD, como POST, PUT y DELETE, puedes utilizar los métodos axios.post(), axios.put() y axios.delete(), respectivamente. Por ejemplo:
+
+---
+
+axios.post('http://localhost:3000/mi-ruta', {data: 'mi-dato'})
+  .then(response => {
+    console.log(response.data);
+  })
+  .catch(error => {
+    console.log(error);
+  });
